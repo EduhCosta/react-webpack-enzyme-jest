@@ -1,0 +1,99 @@
+{
+  "name": "new-webpackproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "git add"
+    ]
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "prepush": "npm run lint",
+    "lint": "eslint src/**/*.js",
+    "test": "jest --watchAll",
+    "start": "webpack-dev-server --open --mode development",
+    "build": "webpack --config webpack.config.prod.js --mode production"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "./src/**/*.{js,jsx,mjs}"
+    ],
+    "setupTestFrameworkScriptFile": "./setupTests.js",
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(css|scss)$": "./node_modules/jest-css-modules",
+      "^.+\\.(js|jsx|mjs)$": "./node_modules/babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
+    "moduleFileExtensions": [
+      "web.js",
+      "mjs",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
+    ]
+  },
+  "keywords": [],
+  "author": "Eduardo Costa",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^8.1.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.1",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.10",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.0.6",
+    "interpolate-html-plugin": "^2.0.0",
+    "jest": "^22.4.2",
+    "jest-css-modules": "^1.1.0",
+    "node-sass": "^4.7.2",
+    "postcss-flexbugs-fixes": "^3.3.0",
+    "postcss-loader": "^2.1.1",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.2",
+    "sw-precache-webpack-plugin": "^0.11.5",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.10",
+    "webpack-dev-server": "^3.1.0",
+    "webpack-manifest-plugin": "^2.0.0-rc.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
+    "proptypes": "^1.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-file-base64": "^1.0.3",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-swipeable-views": "^0.12.13",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  }
+}

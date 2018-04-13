@@ -1,0 +1,12 @@
+# @Eduardo Costa - eduhcosta@live.com
+# Created at - 22/03/2018
+
+root = true                       # Todos os editores
+
+[*]                               # Todos os arquivos
+indent_style = space              # Tipo de identação
+indent_size = 2                   # Tamanho da identação
+end_of_line = lf                  # Fim da linha do coder
+charset = utf-8                   # Linguagem
+trim_trailing_whitespace = true   # Apague todo espaço sem função
+insert_final_newline = true       # No fim do arquivo adiciona uma linha

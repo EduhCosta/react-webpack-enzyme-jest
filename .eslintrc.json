@@ -1,10 +1,10 @@
 {
-  "extends": "airbnb",
-  "plugins": [
-    "import",
+  "extends": [
     "react",
-    "jsx-a11y"
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended"
   ],
+  "plugins": ["jsx-a11y"],
   "rules": {
     "indent": ["error", 2],
     "id-length": 0,
